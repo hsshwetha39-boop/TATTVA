@@ -242,119 +242,283 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* =========================================================
-   OUR WORK VIEWER (all photos + videos, with next / previous)
+   SMOOTH SCROLL, SCROLL ANIMATIONS, ACTIVE MENU, PROGRESS BAR
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const grid = document.querySelector(".work-grid");
+    const reduceMotion = false; /* animations are always on */
+    const header = document.getElementById("header");
 
-    if (!grid) {
+
+    /* ---------- 1. Reading progress bar ---------- */
+
+    const bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+
+    let ticking = false;
+
+    function updateProgress() {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const ratio = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+        bar.style.transform = "scaleX(" + ratio + ")";
+        ticking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+        if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(updateProgress);
+        }
+    }, { passive: true });
+
+    updateProgress();
+
+
+    /* ---------- 2. Eased smooth scroll for in-page links ---------- */
+
+    let scrollFrame = null;
+
+    function cancelScroll() {
+        if (scrollFrame) {
+            window.cancelAnimationFrame(scrollFrame);
+            scrollFrame = null;
+            document.documentElement.style.scrollBehavior = "";
+        }
+    }
+
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function smoothScrollTo(targetY) {
+        cancelScroll();
+
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const duration = Math.min(1100, Math.max(600, Math.abs(distance) * 0.6));
+        const startTime = performance.now();
+
+        /* switch off CSS smooth-scroll while JS drives the animation */
+        document.documentElement.style.scrollBehavior = "auto";
+
+        function step(now) {
+            const progress = Math.min((now - startTime) / duration, 1);
+            window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+
+            if (progress < 1) {
+                scrollFrame = window.requestAnimationFrame(step);
+            } else {
+                scrollFrame = null;
+                document.documentElement.style.scrollBehavior = "";
+            }
+        }
+
+        scrollFrame = window.requestAnimationFrame(step);
+    }
+
+    /* let the visitor take over at any time */
+    ["wheel", "touchstart", "keydown"].forEach(function (evt) {
+        window.addEventListener(evt, cancelScroll, { passive: true });
+    });
+
+    if (!reduceMotion) {
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+            link.addEventListener("click", function (event) {
+
+                const hash = link.getAttribute("href");
+
+                if (!hash || hash === "#") {
+                    return;
+                }
+
+                const target = document.querySelector(hash);
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const offset = hash === "#home"
+                    ? 0
+                    : (header ? header.offsetHeight : 0) - 1;
+
+                const y = target.getBoundingClientRect().top + window.scrollY - offset;
+
+                smoothScrollTo(Math.max(0, y));
+
+                if (window.history && history.pushState) {
+                    history.pushState(null, "", hash);
+                }
+
+            });
+
+        });
+
+    }
+
+
+    /* ---------- 3. Highlight the current section in the menu ---------- */
+
+    const navLinks = document.querySelectorAll('.navigation a[href^="#"]');
+
+    if (navLinks.length && "IntersectionObserver" in window) {
+
+        const spy = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                navLinks.forEach(function (link) {
+                    link.classList.toggle(
+                        "is-current",
+                        link.getAttribute("href") === "#" + entry.target.id
+                    );
+                });
+
+            });
+
+        }, { rootMargin: "-45% 0px -50% 0px" });
+
+        document.querySelectorAll("main section[id]").forEach(function (section) {
+            spy.observe(section);
+        });
+
+    }
+
+
+    /* ---------- 4. Reveal sections as they scroll into view ---------- */
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
         return;
     }
 
-    const viewer = document.createElement("div");
-    viewer.className = "work-viewer";
-    viewer.setAttribute("role", "dialog");
-    viewer.setAttribute("aria-modal", "true");
-    viewer.innerHTML =
-        '<button type="button" class="work-viewer-close" aria-label="Close">&times;</button>' +
-        '<button type="button" class="work-viewer-nav work-prev" aria-label="Previous">&#10094;</button>' +
-        '<div class="work-viewer-body"></div>' +
-        '<button type="button" class="work-viewer-nav work-next" aria-label="Next">&#10095;</button>' +
-        '<div class="work-viewer-count"></div>';
-    document.body.appendChild(viewer);
+    const revealSelectors = [
+        ".rating-item",
+        ".svc-head",
+        ".svc-card",
+        ".about-section .section-heading",
+        ".about-image",
+        ".about-content",
+        ".process-section .section-heading",
+        ".process-item",
+        ".contact-section .section-heading",
+        ".contact-card",
+        ".contact-cta",
+        ".footer-container > *"
+    ];
 
-    const body = viewer.querySelector(".work-viewer-body");
-    const count = viewer.querySelector(".work-viewer-count");
+    revealSelectors.forEach(function (selector) {
 
-    let items = [];
-    let index = 0;
+        document.querySelectorAll(selector).forEach(function (el, index) {
+            el.classList.add("reveal");
+            el.style.transitionDelay = (index % 6) * 90 + "ms";
+        });
 
-    function show(i) {
+    });
 
-        index = (i + items.length) % items.length;
+    const revealer = new IntersectionObserver(function (entries, obs) {
 
-        const item = items[index];
-        const src = item.getAttribute("data-src");
+        entries.forEach(function (entry) {
 
-        if (item.getAttribute("data-type") === "video") {
-            body.innerHTML =
-                '<video src="' + src + '" controls autoplay playsinline></video>';
-        } else {
-            body.innerHTML = '<img src="' + src + '" alt="">';
-        }
+            if (!entry.isIntersecting) {
+                return;
+            }
 
-        count.textContent = (index + 1) + " / " + items.length;
+            const el = entry.target;
+
+            el.classList.add("is-visible");
+            obs.unobserve(el);
+
+            /* once finished, hand control back to the element's normal hover styles */
+            window.setTimeout(function () {
+                el.classList.remove("reveal", "is-visible");
+                el.style.transitionDelay = "";
+            }, 1700);
+
+        });
+
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+
+    document.querySelectorAll(".reveal").forEach(function (el) {
+        revealer.observe(el);
+    });
+
+});
+
+
+
+/* =========================================================
+   COUNT-UP NUMBERS (ratings strip)
+   Works with whatever numbers you type in the HTML, e.g.
+   "5.0", "100+", "2K+", "96%".
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const numbers = document.querySelectorAll(".rating-item strong");
+
+    if (!numbers.length || !("IntersectionObserver" in window)) {
+        return;
     }
 
-    function closeViewer() {
-        viewer.classList.remove("open");
-        body.innerHTML = "";
-    }
+    function animate(el) {
 
-    grid.addEventListener("click", function (event) {
+        const original = el.textContent.trim();
+        const match = original.match(/^([\d.]+)(.*)$/);
 
-        const item = event.target.closest(".work-item");
-
-        if (!item) {
+        if (!match) {
             return;
         }
 
-        /* every photo and video currently in the grid */
-        items = Array.prototype.slice.call(
-            grid.querySelectorAll(".work-item")
-        );
+        const target = parseFloat(match[1]);
+        const suffix = match[2];
+        const decimals = (match[1].split(".")[1] || "").length;
+        const duration = 1600;
+        const start = performance.now();
 
-        viewer.classList.add("open");
-        show(items.indexOf(item));
+        function frame(now) {
+
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+
+            el.textContent = (target * eased).toFixed(decimals) + suffix;
+
+            if (p < 1) {
+                window.requestAnimationFrame(frame);
+            } else {
+                el.textContent = original;
+            }
+
+        }
+
+        window.requestAnimationFrame(frame);
+
+    }
+
+    const io = new IntersectionObserver(function (entries, obs) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+                animate(entry.target);
+                obs.unobserve(entry.target);
+            }
+
+        });
+
+    }, { threshold: 0.6 });
+
+    numbers.forEach(function (el) {
+        io.observe(el);
     });
-
-    viewer.addEventListener("click", function (event) {
-
-        if (event.target === viewer ||
-            event.target.classList.contains("work-viewer-close")) {
-            closeViewer();
-        }
-
-        if (event.target.classList.contains("work-prev")) {
-            show(index - 1);
-        }
-
-        if (event.target.classList.contains("work-next")) {
-            show(index + 1);
-        }
-    });
-
-    document.addEventListener("keydown", function (event) {
-
-        if (!viewer.classList.contains("open")) {
-            return;
-        }
-
-        if (event.key === "Escape") {
-            closeViewer();
-        } else if (event.key === "ArrowLeft") {
-            show(index - 1);
-        } else if (event.key === "ArrowRight") {
-            show(index + 1);
-        }
-    });
-
-    /* swipe left / right on phones */
-    let startX = 0;
-
-    viewer.addEventListener("touchstart", function (event) {
-        startX = event.changedTouches[0].clientX;
-    }, { passive: true });
-
-    viewer.addEventListener("touchend", function (event) {
-
-        const diff = event.changedTouches[0].clientX - startX;
-
-        if (Math.abs(diff) > 50) {
-            show(diff > 0 ? index - 1 : index + 1);
-        }
-    }, { passive: true });
 
 });
