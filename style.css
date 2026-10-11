@@ -880,3 +880,49 @@ a:focus-visible, button:focus-visible {
     .header.scrolled .logo-img { height: 40px; }
     .footer-logo .logo-img { height: 42px; }
 }
+
+/* =========================================================
+   LANGUAGE SWITCHER  (English / ಕನ್ನಡ / हिंदी)
+========================================================= */
+
+.lang-switch {
+    display: inline-flex; align-items: center; gap: 2px; flex: none;
+    padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--white);
+}
+.lang-switch button {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-size: 13px; font-weight: 700; line-height: 1;
+    padding: 8px 12px; border: 0; border-radius: 999px;
+    background: transparent; color: var(--ink); cursor: pointer;
+    transition: background-color .25s ease, color .25s ease, box-shadow .25s ease, transform .2s ease;
+}
+.lang-switch button[lang="kn"] { font-family: "Noto Sans Kannada", sans-serif !important; letter-spacing: normal !important; }
+.lang-switch button[lang="hi"] { font-family: "Noto Sans Devanagari", sans-serif !important; letter-spacing: normal !important; }
+.lang-switch button:hover { background: var(--aqua); }
+.lang-switch button:active { transform: scale(.95); }
+.lang-switch button.is-active { background: var(--green); color: #fff; box-shadow: 0 4px 10px rgba(30, 142, 94, .3); }
+.lang-switch button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+@media (max-width: 1000px) {
+    .lang-switch { margin-left: auto; }
+}
+@media (max-width: 640px) {
+    .nav-container { gap: 8px; }
+    .lang-switch { padding: 2px; }
+    .lang-switch button { font-size: 12px; padding: 7px 8px; }
+}
+
+/* fonts + spacing that suit Kannada and Hindi letters */
+html[lang="kn"] body, html[lang="kn"] body *:not(.lang-switch button) {
+    font-family: "Noto Sans Kannada", "Plus Jakarta Sans", system-ui, sans-serif;
+}
+html[lang="hi"] body, html[lang="hi"] body *:not(.lang-switch button) {
+    font-family: "Noto Sans Devanagari", "Plus Jakarta Sans", system-ui, sans-serif;
+}
+html[lang="kn"] body, html[lang="hi"] body { line-height: 1.8; }
+html[lang="kn"] h1, html[lang="hi"] h1,
+html[lang="kn"] h2, html[lang="hi"] h2,
+html[lang="kn"] h3, html[lang="hi"] h3 { line-height: 1.35; letter-spacing: normal !important; }
+html[lang="kn"] *, html[lang="hi"] * { letter-spacing: normal !important; }
+html[lang="kn"] .hero h1, html[lang="hi"] .hero h1 { line-height: 1.3; }
+html[lang="kn"] .navigation a, html[lang="hi"] .navigation a { font-size: 15px; white-space: nowrap; }
