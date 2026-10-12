@@ -355,10 +355,6 @@
         "kn": "ಕಾನೂನು",
         "hi": "कानूनी"
     },
-    "Last updated: 7 October 2026": {
-        "kn": "ಕೊನೆಯ ಬಾರಿ ನವೀಕರಿಸಿದ್ದು: 7 ಅಕ್ಟೋಬರ್ 2026",
-        "hi": "अंतिम अपडेट: 7 अक्टूबर 2026"
-    },
     "This policy explains how TATTVA Cleaning Services (“we”, “us”) handles your information when you use this website.": {
         "kn": "ಈ ವೆಬ್‌ಸೈಟ್ ಬಳಸುವಾಗ TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್ (“ನಾವು”) ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಹೇಗೆ ನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದನ್ನು ಈ ನೀತಿ ವಿವರಿಸುತ್ತದೆ.",
         "hi": "यह नीति बताती है कि इस वेबसाइट का उपयोग करने पर TATTVA क्लीनिंग सर्विसेज़ (“हम”) आपकी जानकारी को कैसे संभालती है।"
@@ -366,10 +362,6 @@
     "Information we receive": {
         "kn": "ನಾವು ಸ್ವೀಕರಿಸುವ ಮಾಹಿತಿ",
         "hi": "हमें मिलने वाली जानकारी"
-    },
-    "This website does not ask you to create an account and does not store any personal details on its own. We only receive information that you choose to send us, for example when you:": {
-        "kn": "ಈ ವೆಬ್‌ಸೈಟ್ ನಿಮ್ಮನ್ನು ಖಾತೆ ರಚಿಸಲು ಕೇಳುವುದಿಲ್ಲ ಮತ್ತು ಯಾವುದೇ ವೈಯಕ್ತಿಕ ವಿವರಗಳನ್ನು ತಾನಾಗಿ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ನೀವು ಸ್ವತಃ ನಮಗೆ ಕಳುಹಿಸಲು ಆಯ್ಕೆ ಮಾಡುವ ಮಾಹಿತಿಯನ್ನು ಮಾತ್ರ ನಾವು ಸ್ವೀಕರಿಸುತ್ತೇವೆ, ಉದಾಹರಣೆಗೆ ನೀವು:",
-        "hi": "यह वेबसाइट आपसे खाता बनाने को नहीं कहती और अपने आप कोई व्यक्तिगत जानकारी संग्रहीत नहीं करती। हम केवल वही जानकारी प्राप्त करते हैं जो आप स्वयं हमें भेजना चुनते हैं, उदाहरण के लिए जब आप:"
     },
     "call us on +91 9180577099;": {
         "kn": "+91 9180577099 ಗೆ ನಮಗೆ ಕರೆ ಮಾಡಿದಾಗ;",
@@ -450,6 +442,86 @@
     "Privacy Policy of TATTVA Cleaning Services.": {
         "kn": "TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್‌ನ ಗೌಪ್ಯತಾ ನೀತಿ.",
         "hi": "TATTVA क्लीनिंग सर्विसेज़ की गोपनीयता नीति।"
+    },
+    "Register Now": {
+        "kn": "ಈಗಲೇ ನೋಂದಣಿ ಮಾಡಿ",
+        "hi": "अभी रजिस्टर करें"
+    },
+    "Full Name": {
+        "kn": "ಪೂರ್ಣ ಹೆಸರು",
+        "hi": "पूरा नाम"
+    },
+    "Your full name": {
+        "kn": "ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು",
+        "hi": "आपका पूरा नाम"
+    },
+    "Phone Number": {
+        "kn": "ಫೋನ್ ಸಂಖ್ಯೆ",
+        "hi": "फ़ोन नंबर"
+    },
+    "10-digit mobile number": {
+        "kn": "10 ಅಂಕಿಗಳ ಮೊಬೈಲ್ ಸಂಖ್ಯೆ",
+        "hi": "10 अंकों का मोबाइल नंबर"
+    },
+    "Service Needed": {
+        "kn": "ಬೇಕಾದ ಸೇವೆ",
+        "hi": "आवश्यक सेवा"
+    },
+    "Select a service": {
+        "kn": "ಸೇವೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",
+        "hi": "सेवा चुनें"
+    },
+    "Your Area": {
+        "kn": "ನಿಮ್ಮ ಪ್ರದೇಶ",
+        "hi": "आपका क्षेत्र"
+    },
+    "e.g. JP Nagar, Bengaluru": {
+        "kn": "ಉದಾ. ಜೆಪಿ ನಗರ, ಬೆಂಗಳೂರು",
+        "hi": "जैसे जेपी नगर, बेंगलुरु"
+    },
+    "Preferred Date (optional)": {
+        "kn": "ಇಷ್ಟದ ದಿನಾಂಕ (ಐಚ್ಛಿಕ)",
+        "hi": "पसंदीदा तारीख़ (वैकल्पिक)"
+    },
+    "Message (optional)": {
+        "kn": "ಸಂದೇಶ (ಐಚ್ಛಿಕ)",
+        "hi": "संदेश (वैकल्पिक)"
+    },
+    "Tell us about your requirement": {
+        "kn": "ನಿಮ್ಮ ಅಗತ್ಯದ ಬಗ್ಗೆ ತಿಳಿಸಿ",
+        "hi": "अपनी ज़रूरत के बारे में बताएँ"
+    },
+    "Fill in your details and we will call or message you to confirm your service.": {
+        "kn": "ನಿಮ್ಮ ವಿವರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ, ನಿಮ್ಮ ಸೇವೆಯನ್ನು ದೃಢಪಡಿಸಲು ನಾವು ನಿಮಗೆ ಕರೆ ಮಾಡುತ್ತೇವೆ ಅಥವಾ ಸಂದೇಶ ಕಳುಹಿಸುತ್ತೇವೆ.",
+        "hi": "अपनी जानकारी भरें, हम आपकी सेवा की पुष्टि के लिए आपको कॉल या संदेश करेंगे।"
+    },
+    "Your details are used only to contact you about your service.": {
+        "kn": "ನಿಮ್ಮ ವಿವರಗಳನ್ನು ನಿಮ್ಮ ಸೇವೆಯ ಬಗ್ಗೆ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಲು ಮಾತ್ರ ಬಳಸಲಾಗುತ್ತದೆ.",
+        "hi": "आपकी जानकारी का उपयोग केवल आपकी सेवा के बारे में आपसे संपर्क करने के लिए किया जाता है।"
+    },
+    "Thank you! Your registration has been received. We will contact you soon.": {
+        "kn": "ಧನ್ಯವಾದಗಳು! ನಿಮ್ಮ ನೋಂದಣಿ ಸ್ವೀಕರಿಸಲಾಗಿದೆ. ನಾವು ಶೀಘ್ರದಲ್ಲೇ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.",
+        "hi": "धन्यवाद! आपका रजिस्ट्रेशन मिल गया है। हम जल्द ही आपसे संपर्क करेंगे।"
+    },
+    "Last updated: 12 October 2026": {
+        "kn": "ಕೊನೆಯ ಬಾರಿ ನವೀಕರಿಸಿದ್ದು: 12 ಅಕ್ಟೋಬರ್ 2026",
+        "hi": "अंतिम अपडेट: 12 अक्टूबर 2026"
+    },
+    "This website does not ask you to create an account. We only receive information that you choose to send us, for example when you:": {
+        "kn": "ಈ ವೆಬ್‌ಸೈಟ್ ನಿಮ್ಮನ್ನು ಖಾತೆ ರಚಿಸಲು ಕೇಳುವುದಿಲ್ಲ. ನೀವು ಸ್ವತಃ ನಮಗೆ ಕಳುಹಿಸಲು ಆಯ್ಕೆ ಮಾಡುವ ಮಾಹಿತಿಯನ್ನು ಮಾತ್ರ ನಾವು ಸ್ವೀಕರಿಸುತ್ತೇವೆ, ಉದಾಹರಣೆಗೆ ನೀವು:",
+        "hi": "यह वेबसाइट आपसे खाता बनाने को नहीं कहती। हम केवल वही जानकारी प्राप्त करते हैं जो आप स्वयं हमें भेजना चुनते हैं, उदाहरण के लिए जब आप:"
+    },
+    "fill in the Register Now form on this website (your name, phone number, service, area, preferred date and message);": {
+        "kn": "ಈ ವೆಬ್‌ಸೈಟ್‌ನಲ್ಲಿರುವ ‘ಈಗಲೇ ನೋಂದಣಿ ಮಾಡಿ’ ಫಾರ್ಮ್ ಅನ್ನು ಭರ್ತಿ ಮಾಡಿದಾಗ (ನಿಮ್ಮ ಹೆಸರು, ಫೋನ್ ಸಂಖ್ಯೆ, ಸೇವೆ, ಪ್ರದೇಶ, ಇಷ್ಟದ ದಿನಾಂಕ ಮತ್ತು ಸಂದೇಶ);",
+        "hi": "इस वेबसाइट पर ‘अभी रजिस्टर करें’ फ़ॉर्म भरते हैं (आपका नाम, फ़ोन नंबर, सेवा, क्षेत्र, पसंदीदा तारीख़ और संदेश);"
+    },
+    "<strong>Google</strong> (Google Sheets and Google Apps Script) stores and delivers the details you submit through the Register Now form, under Google’s own privacy policy.": {
+        "kn": "<strong>Google</strong> (Google Sheets ಮತ್ತು Google Apps Script) ‘ಈಗಲೇ ನೋಂದಣಿ ಮಾಡಿ’ ಫಾರ್ಮ್ ಮೂಲಕ ನೀವು ಸಲ್ಲಿಸುವ ವಿವರಗಳನ್ನು ಸಂಗ್ರಹಿಸುತ್ತದೆ ಮತ್ತು ತಲುಪಿಸುತ್ತದೆ, ಇದು Google ನ ಸ್ವಂತ ಗೌಪ್ಯತಾ ನೀತಿಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ.",
+        "hi": "<strong>Google</strong> (Google Sheets और Google Apps Script) ‘अभी रजिस्टर करें’ फ़ॉर्म से भेजी गई जानकारी को संग्रहीत करता है और हम तक पहुँचाता है, यह Google की अपनी गोपनीयता नीति के अधीन है।"
+    },
+    "Sorry, we could not send your details. Please try again or call us.": {
+        "kn": "ಕ್ಷಮಿಸಿ, ನಿಮ್ಮ ವಿವರಗಳನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ನಮಗೆ ಕರೆ ಮಾಡಿ.",
+        "hi": "क्षमा करें, आपकी जानकारी नहीं भेजी जा सकी। कृपया फिर से कोशिश करें या हमें कॉल करें।"
     }
 };
 
@@ -457,7 +529,7 @@
     var STORE_KEY = "tattva-lang";
 
     var BLOCK_SELECTOR = "p,h1,h2,h3,h4,li,ul,ol,div,section,nav,header,footer,main,form,article";
-    var UNIT_TAGS = { h1: 1, h2: 1, h3: 1, h4: 1, p: 1, li: 1, span: 1, a: 1, strong: 1, em: 1, label: 1, button: 1, div: 1, small: 1 };
+    var UNIT_TAGS = { h1: 1, h2: 1, h3: 1, h4: 1, p: 1, li: 1, span: 1, a: 1, strong: 1, em: 1, label: 1, button: 1, div: 1, small: 1, option: 1 };
     var SKIP_TAGS = { script: 1, style: 1, svg: 1, noscript: 1, head: 1 };
     var SKIP_CLASSES = ["logo", "footer-logo", "hero-art", "hero-bubbles", "hero-wave", "lang-switch", "svc-icon", "contact-icon", "scroll-progress"];
     var KEEP_ENGLISH = { "WhatsApp": 1, "Instagram": 1 };
@@ -545,6 +617,11 @@
         ["meta[name='description']", "meta[property='og:title']", "meta[property='og:description']"].forEach(function (sel) {
             var m = document.querySelector(sel);
             if (m) { units.push({ kind: "attr", el: m, attr: "content", en: m.getAttribute("content") }); }
+        });
+
+        /* hint text inside form boxes */
+        document.querySelectorAll("[placeholder]").forEach(function (el) {
+            units.push({ kind: "attr", el: el, attr: "placeholder", en: el.getAttribute("placeholder") });
         });
 
         /* screen-reader labels (menu button, call / WhatsApp buttons) */

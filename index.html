@@ -107,6 +107,7 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <a href="#register" class="nav-button nav-outline">Register Now</a>
                 <a href="tel:+919180577099" class="nav-button">Call Now</a>
             </nav>
             <div class="lang-switch" role="group" aria-label="Language">
@@ -152,6 +153,10 @@
                         <a href="https://wa.me/919180577099?text=Hello%20TATTVA%20Cleaning%20Services%2C%20I%20need%20a%20service." target="_blank" rel="noopener" class="button button-whatsapp btn-ico">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 2.1 17.7L1 23l5.4-1.4a11.8 11.8 0 0 0 5.6 1.4h.1A11.8 11.8 0 0 0 20.5 3.5zM12 21.2a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.2.8.9-3.1-.2-.4a9.8 9.8 0 1 1 7.9 4.3zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.4 3.4 14.7 14.7 0 0 0 5.6 5c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3z"/></svg>
                             WhatsApp Us
+                        </a>
+                        <a href="#register" class="button button-sun btn-ico">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+                            Register Now
                         </a>
                     </div>
                 </div>
@@ -287,6 +292,65 @@
             </div>
         </section>
 
+
+        <!-- REGISTER -->
+        <section class="register-section" id="register">
+            <div class="container register-grid">
+                <div class="register-copy">
+                    <h2>Register Now</h2>
+                    <p>Fill in your details and we will call or message you to confirm your service.</p>
+                    <p class="register-note">Your details are used only to contact you about your service.</p>
+                </div>
+                <div class="register-card">
+                    <form id="registerForm" class="register-form" autocomplete="on" onsubmit="return false;">
+                        <div class="field">
+                            <label for="regName">Full Name</label>
+                            <input id="regName" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+                        </div>
+                        <div class="field">
+                            <label for="regPhone">Phone Number</label>
+                            <input id="regPhone" name="phone" type="tel" inputmode="tel" placeholder="10-digit mobile number" required pattern="(\+?91 ?)?[6-9][0-9]{9}" autocomplete="tel">
+                        </div>
+                        <div class="field">
+                            <label for="regService">Service Needed</label>
+                            <select id="regService" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="Water Tank Cleaning">Water Tank Cleaning</option>
+                                <option value="Sump Tank Cleaning">Sump Tank Cleaning</option>
+                                <option value="Solar Water Heater Tube Cleaning">Solar Water Heater Tube Cleaning</option>
+                                <option value="Waterproof Painting">Waterproof Painting</option>
+                                <option value="Car Washing">Car Washing</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="regArea">Your Area</label>
+                            <input id="regArea" name="area" type="text" placeholder="e.g. JP Nagar, Bengaluru" required autocomplete="address-level2">
+                        </div>
+                        <div class="field field-full">
+                            <label for="regDate">Preferred Date (optional)</label>
+                            <input id="regDate" name="date" type="date">
+                        </div>
+                        <div class="field field-full">
+                            <label for="regMessage">Message (optional)</label>
+                            <textarea id="regMessage" name="message" rows="3" placeholder="Tell us about your requirement"></textarea>
+                        </div>
+                        <div class="hp" aria-hidden="true" data-i18n-skip><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                        <button type="submit" class="button button-primary btn-ico register-submit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            Register Now
+                        </button>
+                        <div class="form-success" id="registerDone" role="status" hidden>
+                            <span>Thank you! Your registration has been received. We will contact you soon.</span>
+                        </div>
+                        <div class="form-error" id="registerError" role="alert" hidden>
+                            <span>Sorry, we could not send your details. Please try again or call us.</span>
+                            <a href="tel:+919180577099">Call +91 9180577099</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- CONTACT -->
         <section class="contact-section section" id="contact">
             <div class="container">
@@ -346,6 +410,7 @@
                 <h3>Quick Links</h3>
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
+                <a href="#register">Register Now</a>
                 <a href="about.html">About</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="#contact">Contact</a>

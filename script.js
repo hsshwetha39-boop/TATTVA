@@ -410,6 +410,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ".about-content",
         ".process-section .section-heading",
         ".process-item",
+        ".register-copy",
+        ".register-card",
         ".contact-section .section-heading",
         ".contact-card",
         ".contact-cta",
@@ -519,6 +521,114 @@ document.addEventListener("DOMContentLoaded", function () {
 
     numbers.forEach(function (el) {
         io.observe(el);
+    });
+
+});
+
+
+
+/* =========================================================
+   REGISTER NOW FORM
+   Saves the details to your Google Sheet (and emails you).
+   The visitor stays on the page and sees the thank-you message.
+   Nothing here opens WhatsApp or goes to another page.
+
+   >>> PASTE YOUR GOOGLE "WEB APP URL" BETWEEN THE QUOTES BELOW <<<
+   Example:  "https://script.google.com/macros/s/AKfycb.../exec"
+========================================================= */
+
+const REGISTER_ENDPOINT = "";
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("registerForm");
+
+    if (!form) {
+        return;
+    }
+
+    const done = document.getElementById("registerDone");
+    const failed = document.getElementById("registerError");
+    const button = form.querySelector(".register-submit");
+    const languageNames = { en: "English", kn: "Kannada", hi: "Hindi" };
+
+    /* the date picker should not allow past days */
+    const dateField = document.getElementById("regDate");
+
+    if (dateField) {
+        const now = new Date();
+        const pad = function (n) { return String(n).padStart(2, "0"); };
+        dateField.min = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+    }
+
+    const value = function (id) {
+        const el = document.getElementById(id);
+        return el ? el.value.trim() : "";
+    };
+
+    function setBusy(isBusy) {
+        if (!button) { return; }
+        button.disabled = isBusy;
+        button.classList.toggle("is-loading", isBusy);
+    }
+
+    function show(box) {
+        if (done) { done.hidden = true; }
+        if (failed) { failed.hidden = true; }
+        if (box) {
+            box.hidden = false;
+            box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+    }
+
+    form.addEventListener("submit", function (event) {
+
+        /* never let the browser leave the page */
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        if (!REGISTER_ENDPOINT) {
+            /* the Google Sheet address has not been pasted in yet */
+            console.warn("REGISTER_ENDPOINT is empty in script.js - registrations are not being saved.");
+            show(failed);
+            return;
+        }
+
+        const body = new URLSearchParams();
+        body.set("name", value("regName"));
+        body.set("phone", value("regPhone"));
+        body.set("service", value("regService"));
+        body.set("area", value("regArea"));
+        body.set("date", value("regDate"));
+        body.set("message", value("regMessage"));
+        body.set("language", languageNames[document.documentElement.lang] || "English");
+        body.set("website", form.elements["website"] ? form.elements["website"].value : "");
+
+        const controller = new AbortController();
+        const timer = window.setTimeout(function () { controller.abort(); }, 20000);
+
+        setBusy(true);
+        show(null);
+
+        /* "no-cors": the browser sends it and we cannot read Google's reply, so a
+           finished request is treated as success; a network failure shows the error box */
+        fetch(REGISTER_ENDPOINT, { method: "POST", mode: "no-cors", body: body, signal: controller.signal })
+            .then(function () {
+                form.reset();
+                show(done);
+            })
+            .catch(function () {
+                show(failed);
+            })
+            .finally(function () {
+                window.clearTimeout(timer);
+                setBusy(false);
+            });
+
     });
 
 });
