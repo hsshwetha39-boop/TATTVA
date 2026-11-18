@@ -115,14 +115,6 @@
         "kn": "ಸಂಪ್‌ಗಳು ಮತ್ತು ನೀರಿನ ಸಂಗ್ರಹ ಪ್ರದೇಶಗಳನ್ನು ಸೋರಿಕೆ, ತೇವ ಮತ್ತು ನೀರು ಜಿನುಗುವಿಕೆಯಿಂದ ರಕ್ಷಿಸುವ ವಾಟರ್‌ಪ್ರೂಫ್ ಕೋಟಿಂಗ್ ಮತ್ತು ಪೇಂಟಿಂಗ್.",
         "hi": "वॉटरप्रूफ कोटिंग और पेंटिंग जो सम्प और पानी के भंडारण क्षेत्रों को रिसाव, सीलन और लीकेज से बचाती है।"
     },
-    "Car Washing": {
-        "kn": "ಕಾರ್ ವಾಷಿಂಗ್",
-        "hi": "कार वॉशिंग"
-    },
-    "Thorough car washing and cleaning that leaves your vehicle spotless inside and out. Message us to book a convenient time.": {
-        "kn": "ನಿಮ್ಮ ವಾಹನವನ್ನು ಒಳಗೂ ಹೊರಗೂ ಕಲೆಯಿಲ್ಲದಂತೆ ಹೊಳೆಯುವಂತೆ ಮಾಡುವ ಸಂಪೂರ್ಣ ಕಾರ್ ವಾಷಿಂಗ್. ಅನುಕೂಲಕರ ಸಮಯವನ್ನು ಬುಕ್ ಮಾಡಲು ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ.",
-        "hi": "आपकी गाड़ी को अंदर और बाहर से बेदाग़ चमकाने वाली पूरी कार धुलाई। सुविधाजनक समय बुक करने के लिए हमें संदेश भेजें।"
-    },
     "About TATTVA": {
         "kn": "TATTVA ಬಗ್ಗೆ",
         "hi": "TATTVA के बारे में"
@@ -267,10 +259,6 @@
         "kn": "ನೀರಿನ ಟ್ಯಾಂಕ್ ಮತ್ತು ಸಂಪ್ ಕ್ಲೀನಿಂಗ್, ಬೆಂಗಳೂರು | TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್",
         "hi": "पानी की टंकी और सम्प की सफ़ाई, बेंगलुरु | TATTVA क्लीनिंग सर्विसेज़"
     },
-    "TATTVA Cleaning Services: professional water tank cleaning, sump cleaning, solar water heater tube cleaning, waterproof painting and car washing in Bengaluru. Call +91 9180577099.": {
-        "kn": "TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್: ಬೆಂಗಳೂರಿನಲ್ಲಿ ನೀರಿನ ಟ್ಯಾಂಕ್ ಕ್ಲೀನಿಂಗ್, ಸಂಪ್ ಕ್ಲೀನಿಂಗ್, ಸೋಲಾರ್ ವಾಟರ್ ಹೀಟರ್ ಟ್ಯೂಬ್ ಕ್ಲೀನಿಂಗ್, ವಾಟರ್‌ಪ್ರೂಫ್ ಪೇಂಟಿಂಗ್ ಮತ್ತು ಕಾರ್ ವಾಷಿಂಗ್. ಕರೆ ಮಾಡಿ +91 9180577099.",
-        "hi": "TATTVA क्लीनिंग सर्विसेज़: बेंगलुरु में पानी की टंकी की सफ़ाई, सम्प की सफ़ाई, सोलर वॉटर हीटर ट्यूब की सफ़ाई, वॉटरप्रूफ पेंटिंग और कार वॉशिंग। कॉल करें +91 9180577099।"
-    },
     "Toggle navigation": {
         "kn": "ಮೆನು ತೆರೆಯಿರಿ / ಮುಚ್ಚಿ",
         "hi": "मेन्यू खोलें / बंद करें"
@@ -323,10 +311,6 @@
         "kn": "<strong>ವಾಟರ್‌ಪ್ರೂಫ್ ಪೇಂಟಿಂಗ್</strong> – ಸಂಪ್‌ಗಳು ಮತ್ತು ನೀರಿನ ಸಂಗ್ರಹ ಪ್ರದೇಶಗಳಿಗೆ ವಾಟರ್‌ಪ್ರೂಫ್ ಕೋಟಿಂಗ್.",
         "hi": "<strong>वॉटरप्रूफ पेंटिंग</strong> – सम्प और पानी के भंडारण क्षेत्रों के लिए वॉटरप्रूफ कोटिंग।"
     },
-    "<strong>Car Washing</strong> – thorough cleaning for your vehicle.": {
-        "kn": "<strong>ಕಾರ್ ವಾಷಿಂಗ್</strong> – ನಿಮ್ಮ ವಾಹನಕ್ಕೆ ಸಂಪೂರ್ಣ ಸ್ವಚ್ಛತೆ.",
-        "hi": "<strong>कार वॉशिंग</strong> – आपकी गाड़ी की पूरी सफ़ाई।"
-    },
     "Why customers choose us": {
         "kn": "ಗ್ರಾಹಕರು ನಮ್ಮನ್ನು ಏಕೆ ಆರಿಸುತ್ತಾರೆ",
         "hi": "ग्राहक हमें क्यों चुनते हैं"
@@ -335,9 +319,9 @@
         "kn": "ಸಂಪರ್ಕದಲ್ಲಿರಿ",
         "hi": "हमसे जुड़ें"
     },
-    "Call us on <a href=\"tel:+919180577099\">+91 9180577099</a>, message us on <a href=\"https://wa.me/919180577099\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>, or email <a href=\"mailto:hsshwetha13@gmail.com\">hsshwetha13@gmail.com</a>.": {
-        "kn": "ನಮಗೆ <a href=\"tel:+919180577099\">+91 9180577099</a> ಗೆ ಕರೆ ಮಾಡಿ, <a href=\"https://wa.me/919180577099\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ, ಅಥವಾ <a href=\"mailto:hsshwetha13@gmail.com\">hsshwetha13@gmail.com</a> ಗೆ ಇಮೇಲ್ ಮಾಡಿ.",
-        "hi": "हमें <a href=\"tel:+919180577099\">+91 9180577099</a> पर कॉल करें, <a href=\"https://wa.me/919180577099\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> पर संदेश भेजें, या <a href=\"mailto:hsshwetha13@gmail.com\">hsshwetha13@gmail.com</a> पर ईमेल करें।"
+    "Call us on <a href=\"tel:+919180577099\">+91 9180577099</a>, message us on <a href=\"https://wa.me/919180577099\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>, or email <a href=\"mailto:tattvacleaningservices@gmail.com\">tattvacleaningservices@gmail.com</a>.": {
+        "kn": "ನಮಗೆ <a href=\"tel:+919180577099\">+91 9180577099</a> ಗೆ ಕರೆ ಮಾಡಿ, <a href=\"https://wa.me/919180577099\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> ನಲ್ಲಿ ಸಂದೇಶ ಕಳುಹಿಸಿ, ಅಥವಾ <a href=\"mailto:tattvacleaningservices@gmail.com\">tattvacleaningservices@gmail.com</a> ಗೆ ಇಮೇಲ್ ಮಾಡಿ.",
+        "hi": "हमें <a href=\"tel:+919180577099\">+91 9180577099</a> पर कॉल करें, <a href=\"https://wa.me/919180577099\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> पर संदेश भेजें, या <a href=\"mailto:tattvacleaningservices@gmail.com\">tattvacleaningservices@gmail.com</a> पर ईमेल करें।"
     },
     "© 2026 TATTVA Cleaning Services. All Rights Reserved. &nbsp;|&nbsp; <a href=\"about.html\">About</a> &nbsp;|&nbsp; <a href=\"privacy.html\">Privacy Policy</a>": {
         "kn": "© 2026 TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ. &nbsp;|&nbsp; <a href=\"about.html\">ನಮ್ಮ ಬಗ್ಗೆ</a> &nbsp;|&nbsp; <a href=\"privacy.html\">ಗೌಪ್ಯತಾ ನೀತಿ</a>",
@@ -346,10 +330,6 @@
     "About Us | TATTVA Cleaning Services": {
         "kn": "ನಮ್ಮ ಬಗ್ಗೆ | TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್",
         "hi": "हमारे बारे में | TATTVA क्लीनिंग सर्विसेज़"
-    },
-    "About TATTVA Cleaning Services: professional water tank, sump, solar water heater tube, waterproof painting and car washing services.": {
-        "kn": "TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್ ಬಗ್ಗೆ: ವೃತ್ತಿಪರ ನೀರಿನ ಟ್ಯಾಂಕ್, ಸಂಪ್, ಸೋಲಾರ್ ವಾಟರ್ ಹೀಟರ್ ಟ್ಯೂಬ್, ವಾಟರ್‌ಪ್ರೂಫ್ ಪೇಂಟಿಂಗ್ ಮತ್ತು ಕಾರ್ ವಾಷಿಂಗ್ ಸೇವೆಗಳು.",
-        "hi": "TATTVA क्लीनिंग सर्विसेज़ के बारे में: पेशेवर पानी की टंकी, सम्प, सोलर वॉटर हीटर ट्यूब, वॉटरप्रूफ पेंटिंग और कार वॉशिंग सेवाएँ।"
     },
     "Legal": {
         "kn": "ಕಾನೂನು",
@@ -371,9 +351,9 @@
         "kn": "WhatsApp ನಲ್ಲಿ ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿದಾಗ (ನಿಮ್ಮ ಹೆಸರು, ಫೋನ್ ಸಂಖ್ಯೆ ಮತ್ತು ಸಂದೇಶ ನಮಗೆ ಕಾಣಿಸುತ್ತದೆ); ಅಥವಾ",
         "hi": "WhatsApp पर हमें संदेश भेजते हैं (आपका नाम, फ़ोन नंबर और संदेश हमें दिखाई देते हैं); या"
     },
-    "email us at hsshwetha13@gmail.com.": {
-        "kn": "hsshwetha13@gmail.com ಗೆ ನಮಗೆ ಇಮೇಲ್ ಕಳುಹಿಸಿದಾಗ.",
-        "hi": "hsshwetha13@gmail.com पर हमें ईमेल करते हैं।"
+    "email us at tattvacleaningservices@gmail.com.": {
+        "kn": "tattvacleaningservices@gmail.com ಗೆ ನಮಗೆ ಇಮೇಲ್ ಕಳುಹಿಸಿದಾಗ.",
+        "hi": "tattvacleaningservices@gmail.com पर हमें ईमेल करते हैं।"
     },
     "How we use it": {
         "kn": "ನಾವು ಅದನ್ನು ಹೇಗೆ ಬಳಸುತ್ತೇವೆ",
@@ -431,9 +411,9 @@
         "kn": "ನಾವು ಈ ಪುಟವನ್ನು ಕಾಲಕಾಲಕ್ಕೆ ನವೀಕರಿಸಬಹುದು. ಮೇಲಿನ ದಿನಾಂಕವು ಇದನ್ನು ಕೊನೆಯ ಬಾರಿ ಯಾವಾಗ ಬದಲಾಯಿಸಲಾಯಿತು ಎಂಬುದನ್ನು ತೋರಿಸುತ್ತದೆ.",
         "hi": "हम इस पेज को समय-समय पर अपडेट कर सकते हैं। ऊपर की तारीख बताती है कि इसे आख़िरी बार कब बदला गया था।"
     },
-    "TATTVA Cleaning Services<br>Phone: <a href=\"tel:+919180577099\">+91 9180577099</a><br>Email: <a href=\"mailto:hsshwetha13@gmail.com\">hsshwetha13@gmail.com</a>": {
-        "kn": "TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್<br>ಫೋನ್: <a href=\"tel:+919180577099\">+91 9180577099</a><br>ಇಮೇಲ್: <a href=\"mailto:hsshwetha13@gmail.com\">hsshwetha13@gmail.com</a>",
-        "hi": "TATTVA क्लीनिंग सर्विसेज़<br>फ़ोन: <a href=\"tel:+919180577099\">+91 9180577099</a><br>ईमेल: <a href=\"mailto:hsshwetha13@gmail.com\">hsshwetha13@gmail.com</a>"
+    "TATTVA Cleaning Services<br>Phone: <a href=\"tel:+919180577099\">+91 9180577099</a><br>Email: <a href=\"mailto:tattvacleaningservices@gmail.com\">tattvacleaningservices@gmail.com</a>": {
+        "kn": "TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್<br>ಫೋನ್: <a href=\"tel:+919180577099\">+91 9180577099</a><br>ಇಮೇಲ್: <a href=\"mailto:tattvacleaningservices@gmail.com\">tattvacleaningservices@gmail.com</a>",
+        "hi": "TATTVA क्लीनिंग सर्विसेज़<br>फ़ोन: <a href=\"tel:+919180577099\">+91 9180577099</a><br>ईमेल: <a href=\"mailto:tattvacleaningservices@gmail.com\">tattvacleaningservices@gmail.com</a>"
     },
     "Privacy Policy | TATTVA Cleaning Services": {
         "kn": "ಗೌಪ್ಯತಾ ನೀತಿ | TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್",
@@ -522,6 +502,26 @@
     "Sorry, we could not send your details. Please try again or call us.": {
         "kn": "ಕ್ಷಮಿಸಿ, ನಿಮ್ಮ ವಿವರಗಳನ್ನು ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ ಅಥವಾ ನಮಗೆ ಕರೆ ಮಾಡಿ.",
         "hi": "क्षमा करें, आपकी जानकारी नहीं भेजी जा सकी। कृपया फिर से कोशिश करें या हमें कॉल करें।"
+    },
+    "Electric Geyser Cleaning &amp; Servicing": {
+        "kn": "ಎಲೆಕ್ಟ್ರಿಕ್ ಗೀಸರ್ ಕ್ಲೀನಿಂಗ್ ಮತ್ತು ಸರ್ವಿಸಿಂಗ್",
+        "hi": "इलेक्ट्रिक गीज़र की सफ़ाई और सर्विसिंग"
+    },
+    "Careful cleaning and servicing of electric geysers, removing scale from the heating element and tank so your geyser heats water efficiently.": {
+        "kn": "ಎಲೆಕ್ಟ್ರಿಕ್ ಗೀಸರ್‌ಗಳ ಎಚ್ಚರಿಕೆಯ ಸ್ವಚ್ಛತೆ ಮತ್ತು ಸರ್ವಿಸಿಂಗ್ — ಹೀಟಿಂಗ್ ಎಲಿಮೆಂಟ್ ಮತ್ತು ಟ್ಯಾಂಕ್‌ನಲ್ಲಿ ಕಟ್ಟಿದ ಕಲ್ಮಶವನ್ನು ತೆಗೆದು, ನಿಮ್ಮ ಗೀಸರ್ ನೀರನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಬಿಸಿ ಮಾಡುವಂತೆ ಮಾಡುತ್ತೇವೆ.",
+        "hi": "इलेक्ट्रिक गीज़र की सावधानी से सफ़ाई और सर्विसिंग — हीटिंग एलिमेंट और टैंक से जमा परत हटाई जाती है, ताकि आपका गीज़र पानी को असरदार तरीके से गर्म करे।"
+    },
+    "<strong>Electric Geyser Cleaning &amp; Servicing</strong> – cleaning and servicing of electric geysers, removing scale from the heating element and tank.": {
+        "kn": "<strong>ಎಲೆಕ್ಟ್ರಿಕ್ ಗೀಸರ್ ಕ್ಲೀನಿಂಗ್ ಮತ್ತು ಸರ್ವಿಸಿಂಗ್</strong> – ಹೀಟಿಂಗ್ ಎಲಿಮೆಂಟ್ ಮತ್ತು ಟ್ಯಾಂಕ್‌ನಲ್ಲಿ ಕಟ್ಟಿದ ಕಲ್ಮಶವನ್ನು ತೆಗೆದು ಎಲೆಕ್ಟ್ರಿಕ್ ಗೀಸರ್‌ಗಳನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ ಸರ್ವಿಸ್ ಮಾಡಲಾಗುತ್ತದೆ.",
+        "hi": "<strong>इलेक्ट्रिक गीज़र की सफ़ाई और सर्विसिंग</strong> – हीटिंग एलिमेंट और टैंक से जमा परत हटाकर इलेक्ट्रिक गीज़र की सफ़ाई और सर्विसिंग की जाती है।"
+    },
+    "TATTVA Cleaning Services: professional water tank cleaning, sump cleaning, solar water heater tube cleaning, electric geyser cleaning and servicing, and waterproof painting in Bengaluru. Call +91 9180577099.": {
+        "kn": "TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್: ಬೆಂಗಳೂರಿನಲ್ಲಿ ನೀರಿನ ಟ್ಯಾಂಕ್ ಕ್ಲೀನಿಂಗ್, ಸಂಪ್ ಕ್ಲೀನಿಂಗ್, ಸೋಲಾರ್ ವಾಟರ್ ಹೀಟರ್ ಟ್ಯೂಬ್ ಕ್ಲೀನಿಂಗ್, ಎಲೆಕ್ಟ್ರಿಕ್ ಗೀಸರ್ ಕ್ಲೀನಿಂಗ್ ಮತ್ತು ಸರ್ವಿಸಿಂಗ್, ಹಾಗೂ ವಾಟರ್‌ಪ್ರೂಫ್ ಪೇಂಟಿಂಗ್. ಕರೆ ಮಾಡಿ +91 9180577099.",
+        "hi": "TATTVA क्लीनिंग सर्विसेज़: बेंगलुरु में पानी की टंकी की सफ़ाई, सम्प की सफ़ाई, सोलर वॉटर हीटर ट्यूब की सफ़ाई, इलेक्ट्रिक गीज़र की सफ़ाई और सर्विसिंग, और वॉटरप्रूफ पेंटिंग। कॉल करें +91 9180577099।"
+    },
+    "About TATTVA Cleaning Services: professional water tank, sump, solar water heater tube, electric geyser and waterproof painting services.": {
+        "kn": "TATTVA ಕ್ಲೀನಿಂಗ್ ಸರ್ವಿಸಸ್ ಬಗ್ಗೆ: ವೃತ್ತಿಪರ ನೀರಿನ ಟ್ಯಾಂಕ್, ಸಂಪ್, ಸೋಲಾರ್ ವಾಟರ್ ಹೀಟರ್ ಟ್ಯೂಬ್, ಎಲೆಕ್ಟ್ರಿಕ್ ಗೀಸರ್ ಮತ್ತು ವಾಟರ್‌ಪ್ರೂಫ್ ಪೇಂಟಿಂಗ್ ಸೇವೆಗಳು.",
+        "hi": "TATTVA क्लीनिंग सर्विसेज़ के बारे में: पेशेवर पानी की टंकी, सम्प, सोलर वॉटर हीटर ट्यूब, इलेक्ट्रिक गीज़र और वॉटरप्रूफ पेंटिंग सेवाएँ।"
     }
 };
 

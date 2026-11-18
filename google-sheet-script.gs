@@ -9,7 +9,7 @@
  *        Execute as: Me      Who has access: Anyone
  */
 
-const OWNER_EMAIL = "hsshwetha13@gmail.com";   // where the alert emails go
+const OWNER_EMAIL = "tattvacleaningservices@gmail.com";   // where the alert emails go
 const SHEET_NAME  = "Registrations";            // the tab that stores the leads
 
 const HEADERS = ["Received", "Name", "Phone", "Service", "Area", "Preferred date", "Message", "Language", "Status"];

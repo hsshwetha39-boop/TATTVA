@@ -4,28 +4,28 @@
    ---------------------------------------------------------
    Palette
      --ink      deep water navy: headings, dark sections
-     --green    brand green: main actions
+     --green    (now BLUE) main actions
      --aqua     pale water tint: alternate section background
-     --mint     pale green tint: highlights
+     --mint     pale PINK tint: highlights
    Type: Plus Jakarta Sans (Noto Sans Kannada for Kannada)
 ========================================================= */
 
 :root {
-    --ink: #0b3b66;
-    --ink-deep: #0f5a96;
-    --text: #25384a;
-    --muted: #576774;
+    --ink: #0c3a7a;
+    --ink-deep: #1c63c4;
+    --text: #26364d;
+    --muted: #5a6a82;
 
-    --green: #1e8e5e;
-    --green-dark: #167349;
-    --mint: #e8f5ee;
+    --green: #2a78d6;
+    --green-dark: #1b5fb8;
+    --mint: #fde8f1;
 
-    --blue: #1b86d0;
-    --aqua: #f2f8fc;
-    --line: #dde9f1;
+    --blue: #4aa3f0;
+    --aqua: #eef6ff;
+    --line: #e3e8f5;
 
     --white: #ffffff;
-    --sun: #f6c445;
+    --sun: #f7b6d0;
     --wa: #128c4a;
 
     --r-sm: 10px;
@@ -711,12 +711,12 @@ a:focus-visible, button:focus-visible {
 .ratings-band { background: var(--aqua); }
 .wave-back  { fill: rgba(242, 248, 252, .45); }
 .footer-logo.logo { background: var(--white); }
-.button-primary { box-shadow: 0 6px 16px rgba(30, 142, 94, .22); }
-.button-primary:hover { box-shadow: 0 10px 22px rgba(30, 142, 94, .3); }
+.button-primary { box-shadow: 0 6px 16px rgba(42, 120, 214, .25); }
+.button-primary:hover { box-shadow: 0 10px 22px rgba(42, 120, 214, .32); }
 .svc-card:hover { border-color: var(--blue); }
 .contact-cta { background: linear-gradient(120deg, var(--ink), var(--ink-deep)); }
 .contact-cta .button-primary { background: var(--sun); color: var(--ink); box-shadow: none; }
-.contact-cta .button-primary:hover { background: #ffd566; }
+.contact-cta .button-primary:hover { background: #fbc9dc; }
 .process-number { background: var(--blue); }
 .scroll-progress { background: linear-gradient(90deg, var(--blue), var(--green)); }
 
@@ -899,7 +899,7 @@ a:focus-visible, button:focus-visible {
 .lang-switch button[lang="hi"] { font-family: "Noto Sans Devanagari", sans-serif !important; letter-spacing: normal !important; }
 .lang-switch button:hover { background: var(--aqua); }
 .lang-switch button:active { transform: scale(.95); }
-.lang-switch button.is-active { background: var(--green); color: #fff; box-shadow: 0 4px 10px rgba(30, 142, 94, .3); }
+.lang-switch button.is-active { background: var(--green); color: #fff; box-shadow: 0 4px 10px rgba(42, 120, 214, .32); }
 .lang-switch button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
 @media (max-width: 1000px) {
@@ -939,7 +939,7 @@ html[lang="kn"] .navigation a, html[lang="hi"] .navigation a { font-size: 15px; 
 .navigation a.nav-outline::after { display: none; }
 
 .button-sun { background: var(--sun); color: var(--ink); border: 2px solid var(--sun); }
-.button-sun:hover { background: #ffd566; border-color: #ffd566; color: var(--ink); }
+.button-sun:hover { background: #fbc9dc; border-color: #fbc9dc; color: var(--ink); }
 
 .register-section {
     position: relative; overflow: hidden; padding: 90px 0;
@@ -1024,3 +1024,180 @@ html[lang="kn"] .navigation a, html[lang="hi"] .navigation a { font-size: 15px; 
 @media (min-width: 1001px) {
     .svc-card:nth-child(n+4) .svc-photo { height: 260px; }
 }
+
+
+
+/* =========================================================
+   HERO BANNER (photo)  -  fits desktop, tablet and phone
+========================================================= */
+
+.hero {
+    position: relative; overflow: hidden;
+    min-height: 600px;
+    display: flex; align-items: center;
+    background: linear-gradient(135deg, var(--ink), var(--ink-deep));
+    color: var(--white);
+}
+.hero-bg {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: 80% 50%;
+}
+.hero-overlay {
+    display: block; position: absolute; inset: 0; animation: none;
+    background: linear-gradient(90deg,
+        rgba(8, 42, 102, .93) 0%,
+        rgba(16, 78, 162, .80) 36%,
+        rgba(38, 118, 214, .30) 66%,
+        rgba(244, 160, 196, .16) 100%);
+}
+.hero-container { position: relative; z-index: 2; }
+.hero h1 { text-shadow: 0 2px 18px rgba(6, 28, 70, .35); }
+.hero h1 span {
+    background: linear-gradient(90deg, #ffffff, #ffd0e2, #bfe0ff, #ffffff);
+    background-size: 220% auto;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    animation: textShine 7s linear infinite;
+    text-shadow: none;
+}
+
+/* phones and small tablets: text on top, the photo sits below it as a rounded picture */
+@media (max-width: 820px) {
+    .hero {
+        flex-direction: column; align-items: stretch; min-height: 0;
+        background: linear-gradient(160deg, #0b3a8a 0%, #2a78d6 62%, #f2a6c6 140%);
+    }
+    .hero-container { order: 1; padding-block: 44px 26px; }
+    .hero-bg {
+        order: 2; position: relative; inset: auto;
+        width: calc(100% - 32px); height: auto; aspect-ratio: 4 / 3;
+        margin: 0 16px 26px; border-radius: 20px;
+        object-position: 72% 50%;
+        box-shadow: 0 18px 40px rgba(6, 28, 70, .35);
+    }
+    .hero-overlay { display: none; }
+    .hero h1 { font-size: clamp(2rem, 9vw, 2.7rem); line-height: 1.15; }
+    .hero-buttons { margin-top: 26px; }
+}
+
+/* =========================================================
+   BLUE + LIGHT PINK THEME
+========================================================= */
+
+/* soft sky-to-pink backgrounds for the alternate sections */
+.ratings-band { background: linear-gradient(90deg, #e6f2ff 0%, #fdeaf2 100%); border-bottom-color: #f1dbe6; }
+.about-section, .process-section { background: linear-gradient(180deg, #f0f7ff 0%, #fdeef5 100%); }
+.rating-item strong { color: var(--ink); }
+
+/* accents: blue to pink instead of blue to green */
+.scroll-progress { background: linear-gradient(90deg, #4aa3f0, #f08fb8); }
+.section-heading h2::after, .svc-head h2::after { background: linear-gradient(90deg, #4aa3f0, #f08fb8); }
+.navigation a:not(.nav-button)::after { background: linear-gradient(90deg, #2a78d6, #f08fb8); }
+.navigation a.is-current { color: var(--green); }
+
+/* buttons */
+.button-primary { background: linear-gradient(135deg, #2a78d6, #1b5fb8); }
+.button-primary:hover { background: linear-gradient(135deg, #3a8be8, #2a78d6); }
+.navigation .nav-button { background: linear-gradient(135deg, #2a78d6, #1b5fb8); }
+.navigation .nav-button:hover { background: linear-gradient(135deg, #3a8be8, #2a78d6); }
+.navigation .nav-button.nav-outline { background: transparent; color: var(--green); border-color: var(--green); }
+.navigation .nav-button.nav-outline:hover { background: var(--green); color: var(--white); }
+.button-sun { background: var(--sun); color: var(--ink); border-color: var(--sun); }
+.button-sun:hover { background: #fbc9dc; border-color: #fbc9dc; color: var(--ink); }
+.lang-switch button.is-active { background: var(--green); }
+
+/* cards */
+.svc-card:hover { border-color: #f08fb8; }
+.svc-icon { color: var(--green); background: #ffffff; }
+.about-point span { background: #fde8f1; color: var(--green); }
+.process-number { background: linear-gradient(135deg, #2a78d6, #f08fb8); }
+
+/* dark blocks: blue sliding into a soft rose */
+.register-section { background: linear-gradient(120deg, #0b3a8a 0%, #2a78d6 58%, #ec9dbf 118%); }
+.register-section::before, .register-section::after { border-color: rgba(255, 255, 255, .22); }
+.contact-cta { background: linear-gradient(120deg, #0b3a8a 0%, #2a78d6 62%, #ec9dbf 125%); }
+.contact-cta .button-primary { background: var(--sun); color: var(--ink); }
+.contact-cta .button-primary:hover { background: #fbc9dc; }
+.footer { background: linear-gradient(165deg, #082a66 0%, #0f4592 70%, #4a4a9a 130%); }
+.footer a:hover, .footer-links a:hover, .footer-contact a:hover { color: #ffc9dd; }
+
+/* form */
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #4aa3f0; box-shadow: 0 0 0 4px rgba(244, 160, 196, .28); }
+.form-success { background: #fde8f1; color: var(--ink); }
+
+/* about / privacy page banner */
+.legal-hero { background: linear-gradient(120deg, #0b3a8a 0%, #2a78d6 62%, #ec9dbf 125%); color: #fff; }
+.legal-hero h1, .legal-hero p { color: #fff; }
+
+
+/* very narrow phones (360px and below): keep logo, language buttons and menu button inside the screen */
+@media (max-width: 380px) {
+    .nav-container { gap: 6px; }
+    .logo-img { height: 42px; }
+    .header.scrolled .logo-img { height: 38px; }
+    .lang-switch button { padding: 6px 7px; font-size: 11.5px; }
+}
+
+@media (max-width: 340px) {
+    .logo-img { height: 34px; }
+    .header.scrolled .logo-img { height: 32px; }
+    .lang-switch button { padding: 5px 5px; font-size: 10.5px; }
+    .menu-button { width: 40px; height: 40px; }
+    .nav-container { gap: 4px; }
+}
+
+
+/* =========================================================
+   SOFT LIGHT BACKGROUNDS  (no white backgrounds anywhere)
+   Light sky blue + light pink. White is kept only for text
+   on coloured buttons and dark blue blocks.
+========================================================= */
+
+:root {
+    --tint-sky: #e3f0fd;      /* light sky blue: page + blue sections  */
+    --tint-sky-2: #eaf3ff;    /* slightly lighter sky: cards, switches */
+    --tint-pink: #fde6f0;     /* light pink: pink sections             */
+    --tint-pink-2: #fff0f6;   /* slightly lighter pink: cards, inputs  */
+    --edge-sky: #c9def5;      /* thin borders on sky areas             */
+    --edge-pink: #f2cadc;     /* thin borders on pink areas            */
+}
+
+html, body { background: var(--tint-sky); }
+
+/* header + menu */
+.header { background: rgba(227, 240, 253, .93); }
+.header.scrolled { background: rgba(227, 240, 253, .98); }
+.menu-button { background: var(--tint-sky-2); }
+.lang-switch { background: var(--tint-sky-2); border-color: var(--edge-sky); }
+@media (max-width: 1000px) {
+    .navigation { background: var(--tint-sky); }
+}
+
+/* sections */
+.ratings-band    { background: linear-gradient(90deg, #dcebfc 0%, #fbe3ed 100%); }
+.svc-showcase    { background: var(--tint-sky); }
+.about-section   { background: linear-gradient(180deg, #e0eefd 0%, #fbe4ee 100%); }
+.process-section { background: linear-gradient(180deg, #fbe4ee 0%, #e0eefd 100%); }
+.contact-section { background: var(--tint-pink); }
+.legal-body      { background: var(--tint-sky); }
+
+/* cards */
+.svc-card        { background: var(--tint-pink-2); border-color: var(--edge-pink); }
+.svc-icon        { background: var(--tint-sky-2); }
+.about-point     { background: var(--tint-sky-2); border-color: var(--edge-sky); }
+.process-item    { background: var(--tint-sky-2); border-color: var(--edge-sky); }
+.contact-card    { background: var(--tint-sky-2); border-color: var(--edge-sky); }
+.register-card   { background: var(--tint-sky-2); }
+.footer-logo, .footer-logo.logo { background: var(--tint-sky); }
+
+/* form boxes */
+.field input, .field select, .field textarea { background: var(--tint-pink-2); border-color: var(--edge-pink); }
+.field select option { background: var(--tint-sky-2); color: var(--text); }
+
+/* WhatsApp outline button */
+.button-whatsapp, .hero .button-whatsapp:hover { background: var(--tint-pink-2); }
+
+/* long email address on the contact card must stay inside the card */
+.contact-card a, .contact-card p, .footer-contact a { overflow-wrap: anywhere; }
+.hp input { background: transparent; border: 0; }
