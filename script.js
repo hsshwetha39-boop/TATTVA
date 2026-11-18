@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", function () {
    Example:  "https://script.google.com/macros/s/AKfycb.../exec"
 ========================================================= */
 
-const REGISTER_ENDPOINT = "https://script.google.com/macros/s/AKfycbwv0iOm5ba66IqhZkDSEzb6reXEVM7MV9bjR9i6UnuFTdEtpME9jxOLfJVY7EfG-UiPuQ/exec";
+const REGISTER_ENDPOINT = "https://script.google.com/macros/s/AKfycbyAv0P2TGaQ-S08tBZCE35VNkG-7_Llo0lbZiVNrBTiGJDnw7hgAh1sYnb6rAkePQQF8g/exec";
 
 document.addEventListener("DOMContentLoaded", function () {
 
