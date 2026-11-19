@@ -1201,3 +1201,64 @@ html, body { background: var(--tint-sky); }
 /* long email address on the contact card must stay inside the card */
 .contact-card a, .contact-card p, .footer-contact a { overflow-wrap: anywhere; }
 .hp input { background: transparent; border: 0; }
+
+
+/* =========================================================
+   HERO BUTTONS: each one in its own colour, icon in a round badge
+   Call = blue    WhatsApp = WhatsApp green    Register = pink
+========================================================= */
+
+.btn-ico { gap: 12px; padding-left: 14px; }
+.btn-ico svg {
+    box-sizing: border-box; flex: none;
+    width: 34px; height: 34px; padding: 8px;
+    border-radius: 50%;
+    transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), background-color .25s ease;
+}
+
+/* Call Us - blue */
+.hero .button-primary {
+    background: linear-gradient(135deg, #3a8be8 0%, #1b5fb8 100%);
+    color: #ffffff; border: 2px solid transparent;
+}
+.hero .button-primary svg { background: rgba(255, 255, 255, .22); color: #ffffff; }
+.hero .button-primary:hover { background: linear-gradient(135deg, #4a9bf5 0%, #2a78d6 100%); }
+
+/* WhatsApp Us - WhatsApp green (hero and About page) */
+.button-whatsapp, .hero .button-whatsapp {
+    background: linear-gradient(135deg, #2bc46a 0%, #128c4a 100%);
+    color: #ffffff; border: 2px solid transparent;
+    box-shadow: 0 6px 16px rgba(18, 140, 74, .30);
+}
+.button-whatsapp:hover, .hero .button-whatsapp:hover {
+    background: linear-gradient(135deg, #3ad57a 0%, #17a355 100%);
+    color: #ffffff; box-shadow: 0 10px 22px rgba(18, 140, 74, .40);
+}
+.button-whatsapp svg { background: rgba(255, 255, 255, .22); color: #ffffff; }
+
+/* Register Now - pink */
+.hero .button-sun, .button-sun {
+    background: linear-gradient(135deg, #fbc9dc 0%, #f4a6c4 100%);
+    color: #0c3a7a; border: 2px solid transparent;
+    box-shadow: 0 6px 16px rgba(240, 143, 184, .35);
+}
+.hero .button-sun:hover, .button-sun:hover {
+    background: linear-gradient(135deg, #ffd5e5 0%, #f7b6d0 100%); color: #0c3a7a;
+    box-shadow: 0 10px 22px rgba(240, 143, 184, .45);
+}
+.button-sun svg { background: rgba(12, 58, 122, .12); color: #0c3a7a; }
+
+/* icon movement */
+.btn-ico:hover svg { transform: scale(1.12) rotate(-8deg); }
+.hero .button-primary svg { animation: phoneRing 5s ease-in-out 2s infinite; }
+@keyframes phoneRing {
+    0%, 86%, 100% { transform: rotate(0); }
+    89% { transform: rotate(-16deg); } 92% { transform: rotate(14deg); }
+    95% { transform: rotate(-10deg); } 98% { transform: rotate(6deg); }
+}
+.hero .button-primary:hover svg { animation: none; }
+
+/* keep button text white / navy even inside the About and Privacy page text (link colours must not override it) */
+.button-whatsapp, .button-whatsapp:hover,
+.legal-wrap .button-whatsapp, .legal-actions .button-whatsapp { color: #ffffff !important; text-decoration: none !important; }
+.legal-wrap .button-primary, .legal-actions .button-primary { color: #ffffff !important; text-decoration: none !important; }
