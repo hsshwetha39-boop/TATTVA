@@ -632,3 +632,203 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+/* =========================================================
+   GALLERY  (filter + full-screen photo / video viewer)
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const grid     = document.getElementById("galleryGrid");
+    const lightbox = document.getElementById("lightbox");
+
+    if (!grid || !lightbox) { return; }
+
+    const items    = Array.from(grid.querySelectorAll(".gallery-item"));
+    const chips    = Array.from(document.querySelectorAll(".gallery-filter [data-filter]"));
+    const stage    = document.getElementById("lbStage");
+    const caption  = document.getElementById("lbCaption");
+    const btnClose = document.getElementById("lbClose");
+    const btnPrev  = document.getElementById("lbPrev");
+    const btnNext  = document.getElementById("lbNext");
+
+    let current = -1;          /* index inside the visible list */
+    let opener  = null;        /* card to give focus back to */
+
+
+    /* ---------- filter buttons ---------- */
+
+    chips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+
+            const filter = chip.getAttribute("data-filter");
+
+            chips.forEach(function (c) {
+                c.setAttribute("aria-pressed", c === chip ? "true" : "false");
+            });
+
+            items.forEach(function (item) {
+                const show = filter === "all" || item.getAttribute("data-cat") === filter;
+                item.hidden = !show;
+                item.classList.remove("is-entering");
+                if (show) {
+                    void item.offsetWidth;            /* restart the fade-in */
+                    item.classList.add("is-entering");
+                }
+            });
+        });
+    });
+
+
+    /* ---------- viewer ---------- */
+
+    function visibleItems() {
+        return items.filter(function (item) { return !item.hidden; });
+    }
+
+    function clearStage() {
+        const video = stage.querySelector("video");
+        if (video) {
+            video.pause();
+            video.removeAttribute("src");
+            video.load();
+        }
+        stage.innerHTML = "";
+    }
+
+    function show(index) {
+
+        const list = visibleItems();
+        if (!list.length) { return; }
+
+        current = (index + list.length) % list.length;
+
+        const item = list[current];
+        const text = item.querySelector(".gallery-caption");
+        const src  = item.getAttribute("data-src");
+
+        clearStage();
+
+        if (item.getAttribute("data-type") === "video") {
+            const video = document.createElement("video");
+            video.controls = true;
+            video.autoplay = true;
+            video.playsInline = true;
+            video.setAttribute("playsinline", "");
+            video.preload = "auto";
+            video.poster = item.getAttribute("data-poster") || "";
+            video.src = src;
+            stage.appendChild(video);
+            const p = video.play();
+            if (p && p.catch) { p.catch(function () { /* user can press play */ }); }
+        } else {
+            const img = document.createElement("img");
+            const thumb = item.querySelector("img");
+            img.src = src;
+            img.alt = thumb ? thumb.alt : "";
+            stage.appendChild(img);
+        }
+
+        caption.textContent = text ? text.textContent.trim() : "";
+
+        const single = list.length < 2;
+        btnPrev.hidden = single;
+        btnNext.hidden = single;
+    }
+
+    function open(item) {
+        const list = visibleItems();
+        opener = item;
+        lightbox.hidden = false;
+        document.body.style.overflow = "hidden";
+        show(list.indexOf(item));
+        btnClose.focus();
+    }
+
+    function close() {
+        if (lightbox.hidden) { return; }
+        clearStage();
+        lightbox.hidden = true;
+        document.body.style.overflow = "";
+        current = -1;
+        if (opener) { opener.focus(); }
+    }
+
+    items.forEach(function (item) {
+        item.addEventListener("click", function () { open(item); });
+    });
+
+    btnClose.addEventListener("click", close);
+    btnPrev.addEventListener("click", function () { show(current - 1); });
+    btnNext.addEventListener("click", function () { show(current + 1); });
+
+    /* click on the dark area closes */
+    lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox || event.target === stage) { close(); }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (lightbox.hidden) { return; }
+        if (event.key === "Escape")     { close(); }
+        if (event.key === "ArrowLeft")  { show(current - 1); }
+        if (event.key === "ArrowRight") { show(current + 1); }
+    });
+
+    /* swipe left / right on phones */
+    let startX = null;
+    lightbox.addEventListener("touchstart", function (event) {
+        startX = event.touches.length === 1 ? event.touches[0].clientX : null;
+    }, { passive: true });
+    lightbox.addEventListener("touchend", function (event) {
+        if (startX === null) { return; }
+        const dx = event.changedTouches[0].clientX - startX;
+        startX = null;
+        if (Math.abs(dx) > 60) { show(current + (dx < 0 ? 1 : -1)); }
+    }, { passive: true });
+
+});
+
+
+
+/* =========================================================
+   GALLERY SLIDER  (arrow buttons for the sliding row)
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.getElementById("galleryGrid");
+    const prev  = document.getElementById("gsPrev");
+    const next  = document.getElementById("gsNext");
+
+    if (!track || !prev || !next) { return; }
+
+    function update() {
+        const max = track.scrollWidth - track.clientWidth - 2;
+        prev.disabled = track.scrollLeft <= 2;
+        next.disabled = track.scrollLeft >= max;
+    }
+
+    prev.addEventListener("click", function () {
+        track.scrollBy({ left: -track.clientWidth * 0.8, behavior: "smooth" });
+    });
+
+    next.addEventListener("click", function () {
+        track.scrollBy({ left: track.clientWidth * 0.8, behavior: "smooth" });
+    });
+
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+
+    /* after a filter button is used, go back to the start */
+    document.querySelectorAll(".gallery-filter [data-filter]").forEach(function (chip) {
+        chip.addEventListener("click", function () {
+            track.scrollLeft = 0;
+            window.setTimeout(update, 60);
+        });
+    });
+
+    update();
+    window.setTimeout(update, 400);   /* once the pictures have loaded */
+});

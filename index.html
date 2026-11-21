@@ -118,6 +118,7 @@
             <nav class="navigation" id="navigation">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="#register" class="nav-button nav-outline">Register Now</a>
@@ -159,6 +160,29 @@
                             Register Now
                         </a>
                     </div>
+                </div>
+
+                <div class="hero-services" role="group" aria-label="Services">
+                    <a href="#services" class="hero-service hs-tank">
+                        <span class="hs-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="22" width="40" height="30" rx="3"/><path d="M12 30h40M22 22v-6h20v6M20 52v6M44 52v6"/><path d="M26 41c2-3 4-3 6 0s4 3 6 0"/></svg></span>
+                        <span>Water Tank Cleaning</span>
+                    </a>
+                    <a href="#services" class="hero-service hs-sump">
+                        <span class="hs-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 28h44v26H10z"/><path d="M10 28l6-8h32l6 8"/><path d="M22 40c3-4 6 4 10 0s6 4 10 0"/><path d="M32 8v12M27 14l5-6 5 6"/></svg></span>
+                        <span>Sump Tank Cleaning</span>
+                    </a>
+                    <a href="#services" class="hero-service hs-solar">
+                        <span class="hs-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="9"/><path d="M32 8v7M32 49v7M8 32h7M49 32h7M15 15l5 5M44 44l5 5M49 15l-5 5M20 44l-5 5"/></svg></span>
+                        <span>Solar Water Heater Tube Cleaning</span>
+                    </a>
+                    <a href="#services" class="hero-service hs-geyser">
+                        <span class="hs-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="17" y="8" width="30" height="40" rx="9"/><path d="M26 48v8M38 48v8"/><path d="M35 18l-7 11h8l-7 11"/></svg></span>
+                        <span>Electric Geyser Cleaning &amp; Servicing</span>
+                    </a>
+                    <a href="#services" class="hero-service hs-paint">
+                        <span class="hs-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="10" width="38" height="14" rx="3"/><path d="M48 17h6v14H32v8"/><rect x="28" y="39" width="8" height="15" rx="2"/></svg></span>
+                        <span>Waterproof Painting</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -261,6 +285,80 @@
             </div>
         </section>
 
+
+        <!-- GALLERY -->
+        <section class="gallery-section section" id="gallery">
+            <div class="container">
+                <div class="section-heading center">
+                    <span class="section-label">Gallery</span>
+                    <h2>Our Recent Work</h2>
+                    <p>Real photos and videos from the cleaning jobs we have completed.</p>
+                </div>
+
+                <div class="gallery-box">
+
+                    <div class="gallery-filter" role="group" aria-label="Filter photos and videos">
+                        <button type="button" data-filter="all" aria-pressed="true">All</button>
+                        <button type="button" data-filter="tank" aria-pressed="false">Tank &amp; Sump</button>
+                        <button type="button" data-filter="solar" aria-pressed="false">Solar Water Heater</button>
+                    </div>
+
+                    <div class="gallery-slider">
+                        <button type="button" class="gs-btn gs-prev" id="gsPrev" aria-label="Previous">&#8249;</button>
+                        <div class="gallery-grid" id="galleryGrid">
+                        <button type="button" class="gallery-item" data-cat="tank" data-type="video" data-src="tank-video-1.mp4" data-poster="tank-video-1-poster.jpg">
+                            <img src="tank-video-1-poster.jpg" alt="Tank wash-out in progress" loading="lazy" width="480" height="854">
+                            <span class="gallery-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            <span class="gallery-time">0:05</span>
+                            <span class="gallery-caption">Tank wash-out in progress</span>
+                        </button>
+                        <button type="button" class="gallery-item" data-cat="solar" data-type="image" data-src="solar-photo-2.jpg">
+                            <img src="solar-photo-2-thumb.jpg" alt="Cleaning a solar water heater" loading="lazy" width="480" height="854">
+                            <span class="gallery-caption">Cleaning a solar water heater</span>
+                        </button>
+                        <button type="button" class="gallery-item" data-cat="tank" data-type="image" data-src="tank-photo-1.jpg">
+                            <img src="tank-photo-1-thumb.jpg" alt="Removing sludge from the tank" loading="lazy" width="480" height="854">
+                            <span class="gallery-caption">Removing sludge from the tank</span>
+                        </button>
+                        <button type="button" class="gallery-item" data-cat="solar" data-type="video" data-src="solar-video-1.mp4" data-poster="solar-video-1-poster.jpg">
+                            <img src="solar-video-1-poster.jpg" alt="Solar water heater tank being cleaned" loading="lazy" width="480" height="854">
+                            <span class="gallery-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            <span class="gallery-time">0:09</span>
+                            <span class="gallery-caption">Solar water heater tank being cleaned</span>
+                        </button>
+                        <button type="button" class="gallery-item" data-cat="tank" data-type="video" data-src="tank-video-2.mp4" data-poster="tank-video-2-poster.jpg">
+                            <img src="tank-video-2-poster.jpg" alt="Cleaning inside the tank" loading="lazy" width="480" height="854">
+                            <span class="gallery-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            <span class="gallery-time">0:31</span>
+                            <span class="gallery-caption">Cleaning inside the tank</span>
+                        </button>
+                        <button type="button" class="gallery-item" data-cat="solar" data-type="image" data-src="solar-photo-1.jpg">
+                            <img src="solar-photo-1-thumb.jpg" alt="Solar heater tubes taken out for cleaning" loading="lazy" width="480" height="854">
+                            <span class="gallery-caption">Solar heater tubes taken out for cleaning</span>
+                        </button>
+                        <button type="button" class="gallery-item" data-cat="solar" data-type="video" data-src="solar-video-2.mp4" data-poster="solar-video-2-poster.jpg">
+                            <img src="solar-video-2-poster.jpg" alt="Solar heater service in progress" loading="lazy" width="480" height="854">
+                            <span class="gallery-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            <span class="gallery-time">0:10</span>
+                            <span class="gallery-caption">Solar heater service in progress</span>
+                        </button>
+                        <button type="button" class="gallery-item" data-cat="solar" data-type="video" data-src="solar-video-3.mp4" data-poster="solar-video-3-poster.jpg">
+                            <img src="solar-video-3-poster.jpg" alt="Solar tubes laid out on the terrace" loading="lazy" width="480" height="854">
+                            <span class="gallery-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            <span class="gallery-time">0:04</span>
+                            <span class="gallery-caption">Solar tubes laid out on the terrace</span>
+                        </button>
+                        </div>
+                        <button type="button" class="gs-btn gs-next" id="gsNext" aria-label="Next">&#8250;</button>
+                    </div>
+
+                    <div class="gallery-cta">
+                        <a href="#register" class="button button-primary">Register Now</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
         <!-- REGISTER -->
         <section class="register-section" id="register">
@@ -397,6 +495,15 @@
             </div>
         </div>
     </footer>
+
+<!-- Gallery viewer -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery viewer" hidden>
+    <button type="button" class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+    <div class="lb-stage" id="lbStage"></div>
+    <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+    <p class="lb-caption" id="lbCaption"></p>
+</div>
 
 <!-- Floating Call / WhatsApp -->
 <div class="float-contact">
